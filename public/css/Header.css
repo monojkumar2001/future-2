@@ -133,16 +133,6 @@ nav a:hover {
     nav {
         width: 90%;
     }
-    /* .nav-logo {
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 2%;
-        left: 41%;
-    } */
-
    
 }
 
@@ -158,6 +148,13 @@ nav a:hover {
     }
     .header-mobile .temporary-menu {
         left:300px
+    }
+    .join-discord-btn-nav{
+        border: none;
+        background: none;
+    }
+    .join-discord-btn-nav img{
+        width: 50%;
     }
 
 
@@ -229,7 +226,6 @@ nav a:hover {
     .hidden {
         top: -10%;
     }
-
     #mobile-nav {
         display: flex;
         flex-direction: column;
@@ -238,7 +234,7 @@ nav a:hover {
         right: 0px;
         gap: 21px;
         padding: 224px 24px 465px 24px;
-        background-color: #190D29 !important;
+        background: linear-gradient(90deg, #2a8153 0%, #101012 95.79%);
         width: 100%;
         z-index: 99 !important;
         transition: top 0.4s ease-out;

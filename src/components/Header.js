@@ -51,10 +51,10 @@ function Header() {
             </a>
           </HashLink>
 
-          <HashLink to="/#talent-tool">
+          <HashLink to="/#talent">
             <a
               onClick={_toggleSidebar}
-              href="#talent-pool"
+              href="#talent"
               className="nav-link mobile-link"
             >
               Talent Pool
@@ -67,15 +67,6 @@ function Header() {
               className="nav-link mobile-link"
             >
               Virtual
-            </a>
-          </HashLink>
-          <HashLink to="/#remote">
-            <a
-              onClick={_toggleSidebar}
-              href="#remote"
-              className="nav-link mobile-link"
-            >
-              Remote
             </a>
           </HashLink>
           <HashLink to="/#remote">
@@ -107,30 +98,24 @@ function Header() {
           </HashLink>
           <div class="header-link-mobile">
             <div class="social-mob">
-              <a href="" target="_blank">
-                <img src="./images/discord.png" alt="discord" />
-              </a>
-              <a href="" target="_blank">
-                <img src="./images/twitter.png" alt="twitter" />
-              </a>
-              <a href="" target="_blank">
-                <img src="./images/telegram.png" alt="instagram" />
-              </a>
+            <a href="https://pentonium.medium.com/" target={"_blank"}>
+     
+     <img src="./images/medium.png" alt="" />
+   </a>
+   <a href="https://twitter.com/pentonium_ptm" target={"_blank"}>
+
+     <img src="./images/twitter-logo.png" alt="" />
+   </a>
+   <a href="" target={"_blank"}>
+     <img src="./images/discord-logo.png" alt="" />
+   </a>
             </div>
           </div>
-
-          <Link to="/">
-            {/* <button
-              class="con-wal-mob"
-              onClick={_toggleSidebar}
-
-            > Connect wallet
-
-            </button> */}
-            <button className="join-discord-btn">
+          <button className="join-discord-btn-nav">
+            <a href="">
               <img src="./images/join-discord-btn.png" alt="" />
-            </button>
-          </Link>
+            </a>
+          </button>
         </nav>
       </header>
 
@@ -143,16 +128,7 @@ function Header() {
             </div>{" "}
           </Link>
         </div>
-        <div className="nav-right">
-          {/* <div className="socials">
-            <a href="https://discord.gg/MBemqnWhtQ" target="_blank">
-              <img src="./images/discord.png" alt="discord" />
-            </a>
-            <a href="https://twitter.com/cryptoottersnft" target="_blank">
-              <img src="./images/twitter.png" alt="twitter" />
-            </a>
-          </div> */}
-        </div>
+        <div className="nav-right"></div>
       </header>
     </>
   );
