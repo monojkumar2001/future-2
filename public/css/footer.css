@@ -16,7 +16,7 @@
   cursor: pointer;
   opacity: 0;
   transition: 1s;
-  transform:translateY(200px);
+  transform:translateY(20n0px);
 }
 
 .nft-constructer p {
@@ -52,12 +52,14 @@
 }
 .social-list a{
   display: flex;
-  gap: 20px;
+  gap: 22px;
   background: none;
+  align-items: center;
   border: none;
+  justify-content: center;
 }
 .socials .social-list img {
-  width: 100%;
+  width: 70%;
   transition: all 0.3s ease;
 }
 .socials .social-list img:hover {

@@ -91,12 +91,14 @@ html {
 }
 
 body {
-    /* background-image: url(../images/body-img-3.png); */
+  /* background-image: url(../images/hero-bg.png) !important; */
     background: #101012;
     /* background-image: url('https://res.cloudinary.com/ddu4x2opv/video/upload/v1677758326/monoj/video_Final_srlini.mp4'); */
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
+    width: 100%;
+    height: 100vh;
     font-size: var(--p-font);
     font-weight: 400;
     font-family: var(--body-font) !important;

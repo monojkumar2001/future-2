@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 500;
   font-family: var(--secondary-font);
 }
@@ -66,7 +66,7 @@
   background-size: 150px;
 } 
 .swiper-pagination-bullet-active:nth-child(5)::before {
-  margin-left: -22px;
+  margin-left: -29px;
   background-size: 150px;
 } 
 .swiper-pagination-bullet-active::before {
@@ -158,17 +158,73 @@ height: 100px !important;
   overflow: hidden;
   position: relative;
 }
-/* swiper-section-bg */
 .intro{
-  background-image: url(../images/hero-bg.png);
-  opacity: 0;
+  position: relative;
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 100vh;
   transition: 1s;
-  transform: scale(0.2);
   z-index: -1;
   width: 100%;
+}
+.page-bg-1{
+  background-image: url(../images/hero-bg.png);
+}
+.page-bg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+  bottom: 12.29167vw;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  transition: 2.5s;
+  transform: scale(1);  
+  opacity: 0;
+}
+.swiper-slide-active .page-bg{
+  transform: scale(1);
+  opacity: 1;
+  transition-delay: 1.2s;
+  transition-property: transform, opacity;
+}
+.page-bg-2{
+  background-image: url(../images/talent-bg.png);
+}
+.page-bg-3{
+  background-image: url(../images/virtual-bg.png);
+}
+.page-bg-4{
+  background-image: url(../images/remote-bg.png);
+}
+.page-bg-5{
+  background-image: url(../images/community-bg-img.png);
+}
+.page-bg-6{
+  background-image: url(../images/backer-bg-img.png);
+}
+.animate_fadeIn{
+animation-name: fadeIn;
+}
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+}
+100%{
+  opacity: 1;
+}
+}
+:root {
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1
+}
+.animate__animated {
+  animation-duration: 1s;
+  animation-duration: var(--animate-duration);
+  animation-fill-mode: both;
 }
 .swiper-slide-active .intro{
   transform: scale(1);
@@ -177,7 +233,7 @@ height: 100px !important;
   transition-property: transform, opacity;
 }
 .talent-tool {
-  background-image: url(../images/talent-bg.png);
+position: relative;
 }
 .swiper-slide-active .talent-tool{
   transform: scale(1);
@@ -185,28 +241,8 @@ height: 100px !important;
   transition-delay: 0.6s;
   transition-property: transform, opacity;
 }
-.section-bg{
-  opacity: 0;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 100vh;
-  transition: 1s;
-  transform: scale(0.2);
-  z-index: -1;
-}
-
-.virtual-office {
-  background-image: url(../images/virtual-bg.png);
-}
-.swiper-slide-active .virtual-office{
-  transform: scale(1);
-  opacity: 1;
-  transition-delay: 0.6s;
-  transition-property: transform, opacity;
-}
 
 .remote{
-  background-image: url(../images/remote-bg.png);
   padding: 250px 0 100px 0;
 }
 .swiper-slide-active .remote{
@@ -216,7 +252,7 @@ height: 100px !important;
   transition-property: transform, opacity;
 }
 .cummunity{
-  background-image: url(../images/community-bg-img.png);
+
 }
 .swiper-slide-active .cummunity{
   transform: scale(1);
@@ -225,7 +261,7 @@ height: 100px !important;
   transition-property: transform, opacity;
 }
 .backer{
-  background-image: url(../images/backer-bg-img.png);
+
 }
 .swiper-slide-active .backer{
   transform: scale(1);
@@ -236,41 +272,53 @@ height: 100px !important;
 /* ======================== swiper style end ====================== */
 
 /* ================== swiper animition ========================= */
-/*  hero */
-.swiper-slide-active .hero-img{
-  transform: scale(1);
-  opacity: 1;
-  transition-delay: 0.7s;
-  transition-property: transform, opacity;
-}
+
 .swiper-slide-active .hero-left .section-title{
   transform: translateY(0px);
   opacity: 1; 
-  transition-delay: 0.3s;
+  transition-delay: 3.6s;
+  transition-property: transform, opacity;
+}
+.hero-img {
+  top: 5px;
+  transition: 1s;
+  transform: translateX(-500px);
+  opacity: 0;
+}
+.swiper-slide-active .hero-img {
+  transform: translateX(0px);
+  opacity: 1; 
+  transition-delay: 2s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .hero-left p{
   transform: translateY(0px);
   opacity: 1;
-  transition-delay: 0.6s;
+  transition-delay: 4.6s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .join-btn {
   transform: translateY(0px);
   opacity: 1;
-  transition-delay: 1s;
+  transition-delay: 5.1s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .social-link-item {
   transform: translateY(0px);
   opacity: 1;
-  transition-delay: 1s;
+  transition-delay: 5.9s;
   transition-property: transform, opacity;        
 }
+.hero-right{
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(300px);
+  position: absolute;
+  }
 .swiper-slide-active .hero-right{
-  transform:  scale(1);
+  transform: translateX(0px);
   opacity: 1;
-  transition-delay: 0.6s;
+  transition-delay: 2.8s;
   transition-property: transform, opacity;    
 }
 
@@ -278,77 +326,106 @@ height: 100px !important;
 .swiper-slide-active .talent-item-1{
   transform: translateX(0px);
   opacity: 1;
-  transition-delay: 1.4s;
+  transition-delay: 2s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .talent-item-2{
   transform: scale(1);
   opacity: 1;
-  transition-delay: 0.6s;
+  transition-delay: 2.8s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .talent-item-3{
   transform: translateX(0px);
   opacity: 1;
-  transition-delay: 1.5s;
+  transition-delay: 3.6s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .talent-item-4{
   transform: translateX(0px);
   opacity: 1;
-  transition-delay: 1.6s;
+  transition-delay: 4.2s;
   transition-property: transform, opacity;
 }
 
 /* virtual */
+.virtual-left{
+  opacity: 0;
+  transition: 1s;
+  cursor: pointer;
+  transform: translateX(-500px);
+}
 .swiper-slide-active .virtual-left{
-  transform: scale(1);
+  transform: translateY(0px);
   opacity: 1;
-  transition-delay: 1.2s;
+  transition-delay: 2s;
   transition-property: transform, opacity;
+}
+.virtual-right{
+  cursor: pointer;
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(500px);
 }
 .swiper-slide-active .virtual-right{
   transform: translateY(0px);
   opacity: 1;
-  transition-delay: 1.5s;
+  transition-delay: 3s;
   transition-property: transform, opacity;
 }
 /* remote */
+.remote-content {
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(-500px);
+}
 .swiper-slide-active .remote-content{
-  transform: translateY(0px);
+  transform: translateX(0px);
   opacity: 1;
-  transition-delay: 1.5s;
+  transition-delay: 2.2s;
   transition-property: transform, opacity;
 }
+.remote-job-img{
+  opacity: 0;
+  transition: 1s;
+  cursor: pointer;
+  transform: translateX(500px);
+}
 .swiper-slide-active .remote-job-img{
-  transform: scale(1);
+  transform: translateX(0px);
   opacity: 1;
-  transition-delay: 1.2s;
+  transition-delay: 3.2s;
   transition-property: transform, opacity;
 }
 /* cummunity */
+.community-items .community-item {
+  cursor: pointer;
+  opacity: 0;
+  transition: 1.5s;
+  transform: translateY(400px);
+}
 .swiper-slide-active .cummunity-item-1{
-  transform: scale(1);
+  transform: translateY(0px);
   opacity: 1;
-  transition-delay: 1s;
+  transition-delay: 2s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .cummunity-item-2{
-  transform: scale(1);
+  transform: translateY(0px);
   opacity: 1;
-  transition-delay: 1.3s;
+  transition-delay: 3s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .cummunity-item-3{
-  transform: scale(1);
+  transform: translateY(0px);
   opacity: 1;
-  transition-delay: 1.5s;
+  transition-delay: 4s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .cummunity-item-4{
-  transform: scale(1);
+  transform: translateY(0px);
   opacity: 1;
-  transition-delay: 1.7s;
+  transition-delay: 5s;
   transition-property: transform, opacity;
 }
 
@@ -361,41 +438,51 @@ height: 100px !important;
 .swiper-slide-active .section-title{
   transform:translateY(0px);
   opacity: 1;
-  transition-delay: 1s;
+  transition-delay: 2s;
   transition-property: transform, opacity;
 }
 
 .swiper-slide-active .backer-item-1{
   transform:translateY(0px);
   opacity: 1;
-  transition-delay: 1.3s;
+  transition-delay: 2.5s;
   transition-property: transform, opacity;
 }
 
 .swiper-slide-active .backer-item-2{
   transform:translateY(0px);
   opacity: 1;
-  transition-delay: 1.5s;
+  transition-delay: 3.5s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .backer-item-3{
   transform:translateY(0px);
   opacity: 1;
-  transition-delay: 1.7s;
+  transition-delay: 4s;
   transition-property: transform, opacity;
 }
 .swiper-slide-active .backer-item-4{
   transform:translateY(0px);
   opacity: 1;
-  transition-delay: 1.9s;
+  transition-delay: 4.5s;
   transition-property: transform, opacity;
 }
 /* Footer */
-
+.footer-bg {
+  transform:translateY(200px);
+  opacity: 0;
+  transition: 1s;
+}
+.swiper-slide-active .footer-bg{
+  transform:translateY(0px);
+  opacity: 1;
+  transition-delay: 3s;
+  transition-property: transform, opacity;
+}
 .swiper-slide-active .footer-con{
   transform:translateY(0px);
   opacity: 1;
-  transition-delay: 2s;
+  transition-delay: 4.5s;
   transition-property: transform, opacity;
 }
 
@@ -451,6 +538,10 @@ height: 100px !important;
   left: 12%;
   z-index: 1;
 }
+.hero-img img {
+  width: 95%;
+  height: 750px;
+}
 .swiper-pagination-bullet-active::after {
   content: '';
   position: absolute;
@@ -467,7 +558,7 @@ height: 100px !important;
 }
 @media only screen and (max-width:1360px){
   .swiper-pagination .swiper-pagination-bullet {
-    margin: -2px 22px !important;
+    margin: -2px 29px !important;
 }
 .swiper-pagination-bullet-active:nth-child(1)::before {
   margin-left: -40px;

@@ -47,7 +47,7 @@ function Header() {
               href="/"
               className="active-nav nav-link mobile-link"
             >
-              HOME{" "}
+              Home{" "}
             </a>
           </HashLink>
 

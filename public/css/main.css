@@ -40,10 +40,10 @@ transform: translateY(80px);
   justify-content: center;
   gap: 7px;
   left: 11%;
-  bottom: 11%;
+  bottom: 13%;
   opacity: 0;
-transition: 1.5s;
-transform: translateY(-100px);
+  transition: 1.5s;
+  transform: translateY(-100px);
 }
 .social-link-item a{
 transition: 0.4s;
@@ -213,7 +213,10 @@ position: absolute;
   cursor: pointer;
   transform: scale(0.5);
 }
-.remote-job-img:hover{
+.remote-job-imgs{
+  transition: 0.4s;
+}
+.remote-job-imgs:hover{
   transform: scale(1.05);
 }
 .remote-job-img img {

@@ -110,7 +110,7 @@ nav a:hover {
 }
 @media only screen and (max-width:1500px){
     .swiper-pagination .swiper-pagination-bullet{
-        margin: 0px 27px !important;
+        margin: 0px 32px !important;
     }
 }
 @media only screen and (max-width:1350px){
@@ -232,8 +232,8 @@ nav a:hover {
         position: fixed;
         align-items: center;
         right: 0px;
-        gap: 21px;
-        padding: 224px 24px 465px 24px;
+        gap: 40px;
+        padding: 166px 24px 465px 24px;
         background: linear-gradient(90deg, #2a8153 0%, #101012 95.79%);
         width: 100%;
         z-index: 99 !important;
@@ -246,6 +246,7 @@ nav a:hover {
         text-decoration: none;
         font-weight: 700;
         font-family: var(--secondary-font);
+        font-size: 18px;
     }
     .con-wal-mob{
     padding: 15px 30px;

@@ -5,10 +5,11 @@ import { HashLink as HashLink } from "react-router-hash-link";
 import Marquee from "react-fast-marquee";
 import Slider from "react-slick";
 import "swiper/swiper.min.css";
+// import "swiper/css/effect-fade";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/modules/pagination/pagination.min.css";
-import { Mousewheel, Pagination } from "swiper";
+import { EffectFade, Mousewheel, Pagination } from "swiper";
 // typed
 import Typed from "react-typed";
 function Home() {
@@ -43,17 +44,22 @@ function Home() {
         <Swiper
           slidesPerView={1}
           spaceBetween={0}
-          speed={3000}
+          speed={1000}
+          // effect={"fade"}
           mousewheel={true}
-          modules={[Mousewheel, Pagination]}
+          modules={[EffectFade, Mousewheel, Pagination]}
           className="mySwiper"
           pagination={pagination}
         >
           <SwiperSlide>
-            <section id="hero" className="intro section-bg">
+            <section
+              id="hero"
+              className="intro section-bg animate_fadeIn animate__animated"
+            >
               <div className="hero-img">
                 <img src="./images/hero-img.png" alt="" />
               </div>
+              <div className="page-bg-1 page-bg"></div>
               <div className="hero-warrper">
                 <div className="hero-left">
                   <h1 className="section-title">
@@ -84,11 +90,9 @@ function Home() {
               </div>
               <div className="social-link-item">
                 <a href="https://pentonium.medium.com/" target={"_blank"}>
-     
                   <img src="./images/medium.png" alt="" />
                 </a>
                 <a href="https://twitter.com/pentonium_ptm" target={"_blank"}>
-         
                   <img src="./images/twitter-logo.png" alt="" />
                 </a>
                 <a href="" target={"_blank"}>
@@ -99,6 +103,7 @@ function Home() {
           </SwiperSlide>
           <SwiperSlide>
             <section className="talent-tool cpt-6 section-bg">
+              <div className="page-bg-2 page-bg"></div>
               <div className="talent-tool-wrapper">
                 <div className="talent-tool-con">
                   <div className="talent-item talent-item-1">
@@ -121,6 +126,7 @@ function Home() {
           <SwiperSlide>
             {/* =================== virtual-office start ================== */}
             <section className="virtual-office cpb-6 section-bg">
+            <div className="page-bg-3 page-bg"></div>
               <div className="virtual-wrapper">
                 <div className="virtual-left">
                   <div className="virtual-img">
@@ -139,12 +145,15 @@ function Home() {
           <SwiperSlide>
             {/* ================= Remote Job Start ==================== */}
             <section className="remote section-bg">
+            <div className="page-bg-4 page-bg"></div>
               <div className="remote-job-wrapper">
                 <div className="remote-content">
                   <img src="./images/remote-job-img.png" alt="" />
                 </div>
                 <div className="remote-job-img">
-                  <img src="./images/remote-job-img-2.png" alt="" />
+                 <div className="remote-job-imgs">
+                 <img src="./images/remote-job-img-2.png" alt="" />
+                 </div>
                 </div>
               </div>
             </section>
@@ -153,6 +162,7 @@ function Home() {
           <SwiperSlide>
             {/* =================== Community start ========================= */}
             <section className="cummunity section-bg">
+            <div className="page-bg-5 page-bg"></div>
               <div className="container">
                 <div className="community-wrapper">
                   <div className="community-title">
@@ -226,6 +236,7 @@ function Home() {
           <SwiperSlide>
             {/* ===================== Backer start ================== */}
             <section className="backer cpb-6 section-bg">
+            <div className="page-bg-6 page-bg"></div>
               <div className="container">
                 <div className="backer-wrapper">
                   <div className="backer-title">
@@ -323,14 +334,6 @@ function Home() {
                       images,and brands are property of their respective owners.
                       Non-Affiliation and Disclaimer
                     </p>
-                  </div>
-                  <div className="terms-and-policy">
-                    <Link to="/">
-                      <p>Terms of toke Services</p>
-                    </Link>
-                    <Link to="/">
-                      <p>Privacy Policy</p>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -704,14 +707,6 @@ function Home() {
                 brands are property of their respective owners. Non-Affiliation
                 and Disclaimer
               </p>
-            </div>
-            <div className="terms-and-policy">
-              <Link to="/">
-                <p>Terms of toke Services</p>
-              </Link>
-              <Link to="/">
-                <p>Privacy Policy</p>
-              </Link>
             </div>
           </div>
         </section>
