@@ -56,13 +56,29 @@
   background: none;
   align-items: center;
   border: none;
+  position: relative;
   justify-content: center;
+}
+.social-content{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-content p{
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.social-content img{
+  width: 25px !important;
 }
 .socials .social-list img {
   width: 70%;
-  transition: all 0.3s ease;
 }
-.socials .social-list img:hover {
+.socials .social-list{
+  transition: 0.4s;
+}
+.socials .social-list:hover {
   transform: scale(1.1);
 }
 .copyright p{
@@ -162,6 +178,9 @@ justify-content: space-between;
       align-items: center;
     }
     
+    .socials .social-list img {
+      width:90%;
+    }
     .nft-constructer p a img {
       width: 30px;
       margin: 0 10px;

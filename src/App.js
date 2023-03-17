@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 // import particlesConfig from './components/config/particles';
 // import Particles from "react-particles";
-import Footer from "./components/Footer";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -25,7 +25,6 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <Footer />
       </Router>
  
     </div>

@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <>
-      <header class="header-mobile" id="home">
+      <header className="header-mobile" id="home">
         <div className="nav-left">
           <Link to="/">
             {" "}
@@ -96,8 +96,8 @@ function Header() {
               Backer
             </a>
           </HashLink>
-          <div class="header-link-mobile">
-            <div class="social-mob">
+          <div className="header-link-mobile">
+            <div className="social-mob">
             <a href="https://pentonium.medium.com/" target={"_blank"}>
      
      <img src="./images/medium.png" alt="" />

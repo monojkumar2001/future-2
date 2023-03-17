@@ -2,14 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { HashLink as HashLink } from "react-router-hash-link";
-import Marquee from "react-fast-marquee";
-import Slider from "react-slick";
 import "swiper/swiper.min.css";
-// import "swiper/css/effect-fade";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/modules/pagination/pagination.min.css";
-import { EffectFade, Mousewheel, Pagination } from "swiper";
+import { Mousewheel, Pagination } from "swiper";
 // typed
 import Typed from "react-typed";
 function Home() {
@@ -40,14 +36,14 @@ function Home() {
 
   return (
     <React.Fragment>
+      {/* =================== Desktop start ==================== */}
       <section className="pc">
         <Swiper
           slidesPerView={1}
           spaceBetween={0}
           speed={1000}
-          // effect={"fade"}
           mousewheel={true}
-          modules={[EffectFade, Mousewheel, Pagination]}
+          modules={[ Mousewheel, Pagination]}
           className="mySwiper"
           pagination={pagination}
         >
@@ -79,6 +75,9 @@ function Home() {
                   <div className="join-btn">
                     <a href="">
                       <img src="./images/join-discord-btn.png" alt="" />
+                      <div className="join-btn-text">
+                        <p>Join Discord</p>
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -106,18 +105,28 @@ function Home() {
               <div className="page-bg-2 page-bg"></div>
               <div className="talent-tool-wrapper">
                 <div className="talent-tool-con">
-                  <div className="talent-item talent-item-1">
+                  <div className="talent-item talent-item-1 talent-item-box">
                     <img src="./images/talent-img-1.png" alt="" />
+                    <div className="talent-content">
+                      <p>Discover the right candidate from a big pool of talent marketplace. </p>
+                    </div>
                   </div>
-                  <div className="talent-item talent-item-2">
+                  <div className="talent-item talent-item-2 ">
                     <img src="./images/talent-img-2.png" alt="" />
+              
                   </div>
-                  <div className="talent-item talent-item-3">
+                  <div className="talent-item talent-item-3 talent-item-box">
                     <img src="./images/talent-img-3.png" alt="" />
+                    <div className="talent-content">
+                      <p>Collect SBTs as badges and achievements to get recognized among the peers.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="talent-item-buttom talent-item talent-item-4">
+                <div className="talent-item-buttom talent-item talent-item-4 ">
                   <img src="./images/talent-img-4.png" alt="" />
+                  <div className="talent-content">
+                      <p>Collect SBTs as badges and achievements to get recognized among the peers.</p>
+                    </div>
                 </div>
               </div>
             </section>
@@ -126,7 +135,7 @@ function Home() {
           <SwiperSlide>
             {/* =================== virtual-office start ================== */}
             <section className="virtual-office cpb-6 section-bg">
-            <div className="page-bg-3 page-bg"></div>
+              <div className="page-bg-3 page-bg"></div>
               <div className="virtual-wrapper">
                 <div className="virtual-left">
                   <div className="virtual-img">
@@ -137,6 +146,20 @@ function Home() {
                   <div className="virtual-img">
                     <img src="./images/virtual-1.png" alt="" />
                   </div>
+                  <div className="virtual-contents">
+                    <h2>
+                      <span>virtual</span> office
+                    </h2>
+                    <p>
+                      Having a meeting or an event in your office? Or missing
+                      out the experience of sitting with your colleagues is
+                      something which makes us travel to the office every day.
+                      Pentonium offers to build virtual spaces ( offices /
+                      meeting rooms ) according to the brands and help them
+                      launch events, gathering or other activities, customized
+                      just for the brand keeping the brand value alive
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -145,15 +168,16 @@ function Home() {
           <SwiperSlide>
             {/* ================= Remote Job Start ==================== */}
             <section className="remote section-bg">
-            <div className="page-bg-4 page-bg"></div>
+              <div className="page-bg-4 page-bg"></div>
               <div className="remote-job-wrapper">
                 <div className="remote-content">
-                  <img src="./images/remote-job-img.png" alt="" />
+                  <h2>remote <span>job</span> </h2>
+                  <p>Build your business without an office has never been so easy, offering tools to monitor and engage remote employees with an extended form of autonomous agreement protocol, saving money and offering transparency at the same time. </p>
                 </div>
-                <div className="remote-job-img">
-                 <div className="remote-job-imgs">
-                 <img src="./images/remote-job-img-2.png" alt="" />
-                 </div>
+                <div className="remote-job-img ">
+                  <div className="remote-job-imgs">
+                    <img src="./images/remote-job-img-2.png" alt="" />
+                  </div>
                 </div>
               </div>
             </section>
@@ -162,7 +186,7 @@ function Home() {
           <SwiperSlide>
             {/* =================== Community start ========================= */}
             <section className="cummunity section-bg">
-            <div className="page-bg-5 page-bg"></div>
+              <div className="page-bg-5 page-bg"></div>
               <div className="container">
                 <div className="community-wrapper">
                   <div className="community-title">
@@ -184,47 +208,63 @@ function Home() {
                           className="com-2"
                         />
                       </div>
+                      <div className="community-content">
+                        <h3>community</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took </p>
+                      </div>
                     </div>
                     <div className="community-item cummunity-item-2">
                       <div className="community-item-img">
                         <img
-                          src="./images/community-item-2.png"
+                          src="./images/community-item-1.png"
                           alt=""
                           className="com-1"
                         />
                         <img
-                          src="./images/community-item-hover-2.png"
+                          src="./images/community-item-hover-1.png"
                           alt=""
                           className="com-2"
                         />
+                      </div>
+                      <div className="community-content">
+                        <h3>Events</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took </p>
                       </div>
                     </div>
                     <div className="community-item cummunity-item-3">
                       <div className="community-item-img">
                         <img
-                          src="./images/community-item-3.png"
+                          src="./images/community-item-1.png"
                           alt=""
                           className="com-1"
                         />
                         <img
-                          src="./images/community-item-hover-3.png"
+                          src="./images/community-item-hover-1.png"
                           alt=""
                           className="com-2"
                         />
+                      </div>
+                      <div className="community-content">
+                        <h3>Learn</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took </p>
                       </div>
                     </div>
                     <div className="community-item cummunity-item-4">
                       <div className="community-item-img">
                         <img
-                          src="./images/community-item-4.png"
+                          src="./images/community-item-1.png"
                           alt=""
                           className="com-1"
                         />
                         <img
-                          src="./images/community-item-hover-4.png"
+                          src="./images/community-item-hover-1.png"
                           alt=""
                           className="com-2"
                         />
+                      </div>
+                      <div className="community-content">
+                        <h3>Grow</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took </p>
                       </div>
                     </div>
                   </div>
@@ -236,12 +276,11 @@ function Home() {
           <SwiperSlide>
             {/* ===================== Backer start ================== */}
             <section className="backer cpb-6 section-bg">
-            <div className="page-bg-6 page-bg"></div>
+              <div className="page-bg-6 page-bg"></div>
               <div className="container">
                 <div className="backer-wrapper">
                   <div className="backer-title">
                     <h1 className="section-title">
-                      {" "}
                       <span>OUR BACKERS</span>
                     </h1>
                   </div>
@@ -257,6 +296,7 @@ function Home() {
                         className="backer-2"
                         alt=""
                       />
+                      
                     </div>
                     <div className="backer-item backer-item-2">
                       <img
@@ -309,22 +349,38 @@ function Home() {
                         href="https://twitter.com/pentonium_ptm"
                         target="_blank"
                       >
-                        <img src="./images/twitter-1.png" alt="discord" />
+                        <img src="./images/social-bg.png" alt="" />
+                        <div className="social-content">
+                          <img src="./images/twitter.png" alt="" />
+                          <p>Twitter</p>
+                        </div>
                       </a>
                     </div>
                     <div className="social-list">
                       <a href="" target="_blank">
-                        <img src="./images/discord-1.png" alt="discord" />
+                      <img src="./images/social-bg.png" alt="" />
+                        <div className="social-content">
+                          <img src="./images/discord.png" alt="" />
+                          <p>Discord</p>
+                        </div>
                       </a>
                     </div>
                     <div className="social-list">
                       <a href="https://t.me/pentonium" target="_blank">
-                        <img src="./images/telegram-1.png" alt="discord" />
+                      <img src="./images/social-bg.png" alt="" />
+                        <div className="social-content">
+                          <img src="./images/telegram.png" alt="" />
+                          <p>Telegram</p>
+                        </div>
                       </a>
                     </div>
                     <div className="social-list">
                       <a href="https://pentonium.medium.com/" target="_blank">
-                        <img src="./images/mediums.png" alt="discord" />
+                      <img src="./images/social-bg.png" alt="" />
+                        <div className="social-content">
+                        <img src="./images/mediums.png" alt="" />
+                          <p>Medium</p>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -342,6 +398,9 @@ function Home() {
           </SwiperSlide>
         </Swiper>
       </section>
+      {/* =================== Desktop end ==================== */}
+
+      {/* ================ Mobile device  start =============== */}
       <section className="mobile-home">
         {/* =============== Hero Section Start ===================== */}
         <section
@@ -373,7 +432,9 @@ function Home() {
                   data-aos-offset="300"
                   data-aos-duration="3000"
                 >
-                  <img src="./images/join-discord-btn.png" alt="" />
+                    <a href="">
+                      <img src="./images/join-discord-btn-mobile.png" alt="" />
+                    </a>
                 </button>
               </div>
               <div
@@ -483,15 +544,9 @@ function Home() {
                   data-aos="fade-left"
                   data-aos-duration="3000"
                 >
-                  <h1 className="mobile-section-title">Virtual Offices</h1>
+                  <h1 className="mobile-section-title">remote job</h1>
                   <p>
-                    Having a meeting or an event in your office? Or missing out
-                    the experience of sitting with your colleagues is something
-                    which makes us travel to the office every day. Pentonium
-                    offers to build virtual spaces ( offices / meeting rooms )
-                    according to the brands and help them launch events,
-                    gathering or other activities, customized just for the brand
-                    keeping the brand value alive.{" "}
+                  Build your business without an office has never been so easy, offering tools to monitor and engage remote employees with an extended form of autonomous agreement protocol, saving money and offering transparency at the same time. 
                   </p>
                 </div>
               </div>
@@ -515,78 +570,46 @@ function Home() {
               <div className="mobile-community-items">
                 <div className="mobile-community-item cummunity-item-1">
                   <div
-                    className="mobile-community-item-img"
+                    className="mobile-community-item"
                     data-aos="zoom-in-up"
                     data-aos-offset="500"
                     data-aos-duration="3000"
                   >
-                    <img
-                      src="./images/community-item-1.png"
-                      alt=""
-                      className="com-1"
-                    />
-                    <img
-                      src="./images/community-item-hover-1.png"
-                      alt=""
-                      className="com-2"
-                    />
+                    <h2>Community</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
                   </div>
                 </div>
                 <div className="mobile-community-item cummunity-item-2">
-                  <div
-                    className="mobile-community-item-img"
+                <div
+                    className="mobile-community-item"
                     data-aos="zoom-in-up"
                     data-aos-offset="500"
                     data-aos-duration="3000"
                   >
-                    <img
-                      src="./images/community-item-2.png"
-                      alt=""
-                      className="com-1"
-                    />
-                    <img
-                      src="./images/community-item-hover-2.png"
-                      alt=""
-                      className="com-2"
-                    />
+                    <h2>Events</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
                   </div>
                 </div>
                 <div className="mobile-community-item cummunity-item-3">
-                  <div
-                    className="mobile-community-item-img"
+                <div
+                    className="mobile-community-item"
                     data-aos="zoom-in-up"
                     data-aos-offset="500"
                     data-aos-duration="3000"
                   >
-                    <img
-                      src="./images/community-item-3.png"
-                      alt=""
-                      className="com-1"
-                    />
-                    <img
-                      src="./images/community-item-hover-3.png"
-                      alt=""
-                      className="com-2"
-                    />
+                    <h2>Learn</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
                   </div>
                 </div>
                 <div className="mobile-community-item cummunity-item-4">
-                  <div
-                    className="mobile-community-item-img"
+                <div
+                    className="mobile-community-item"
                     data-aos="zoom-in-up"
                     data-aos-offset="500"
                     data-aos-duration="3000"
                   >
-                    <img
-                      src="./images/community-item-4.png"
-                      alt=""
-                      className="com-1"
-                    />
-                    <img
-                      src="./images/community-item-hover-4.png"
-                      alt=""
-                      className="com-2"
-                    />
+                    <h2>Grow</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
                   </div>
                 </div>
               </div>
@@ -679,28 +702,47 @@ function Home() {
             <img src="./images/footer-bg.png" alt="" />
           </div>
           <div className="mobile-footer-con">
-            <div className="socials">
-              <div className="social-list">
-                <a href="https://twitter.com/pentonium_ptm" target="_blank">
-                  <img src="./images/twitter-1.png" alt="discord" />
-                </a>
-              </div>
-              <div className="social-list">
-                <a href="" target="_blank">
-                  <img src="./images/discord-1.png" alt="discord" />
-                </a>
-              </div>
-              <div className="social-list">
-                <a href="https://t.me/pentonium" target="_blank">
-                  <img src="./images/telegram-1.png" alt="discord" />
-                </a>
-              </div>
-              <div className="social-list">
-                <a href="https://pentonium.medium.com/" target="_blank">
-                  <img src="./images/mediums.png" alt="discord" />
-                </a>
-              </div>
-            </div>
+          <div className="socials">
+                    <div className="social-list">
+                      <a
+                        href="https://twitter.com/pentonium_ptm"
+                        target="_blank"
+                      >
+                        <img src="./images/social-bg.png" alt="" />
+                        <div className="social-content">
+                          <img src="./images/twitter.png" alt="" />
+                          <p>Twitter</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="social-list">
+                      <a href="" target="_blank">
+                      <img src="./images/social-bg.png" alt="" />
+                        <div className="social-content">
+                          <img src="./images/discord.png" alt="" />
+                          <p>Discord</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="social-list">
+                      <a href="https://t.me/pentonium" target="_blank">
+                      <img src="./images/social-bg.png" alt="" />
+                        <div className="social-content">
+                          <img src="./images/telegram.png" alt="" />
+                          <p>Telegram</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="social-list">
+                      <a href="https://pentonium.medium.com/" target="_blank">
+                      <img src="./images/social-bg.png" alt="" />
+                        <div className="social-content">
+                        <img src="./images/mediums.png" alt="" />
+                          <p>Medium</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
             <div className="copyright">
               <p>
                 © 2023 Hooked All Rights Reserved. All names, logos, images,and
@@ -711,6 +753,8 @@ function Home() {
           </div>
         </section>
         {/* =========== Footer end ======================= */}
+      {/* ================ Mobile device  end =============== */}
+
       </section>
 
       {/*  */}
